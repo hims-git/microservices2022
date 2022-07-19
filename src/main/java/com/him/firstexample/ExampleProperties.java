@@ -8,14 +8,14 @@ import org.springframework.stereotype.Component;
 public class ExampleProperties {
 
 	public String getGreetings() {
-		return greetings;
+		return greeting;
 	}
 
-	public void setGreetings(String greetings) {
-		this.greetings = greetings;
+	public void setGreeting(String greetings) {
+		this.greeting = greetings;
 	}
 
-	private String greetings = "Thank You :";
+	private String greeting = "Thank You :";
 
 	public ExampleProperties() {
 		// TODO Auto-generated constructor stub
@@ -23,7 +23,7 @@ public class ExampleProperties {
 
 	public String getGreeting() {
 		// TODO Auto-generated method stub
-		return null;
+		return greeting;
 	}
 
 }
