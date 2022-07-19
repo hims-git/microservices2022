@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=C\:\\Users\\himan\\Documents\\workspace-STS\\gitcode\\.git;
-GitRepositoriesView.GitDirectories.relative=gitcode\\.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\himan\\Documents\\microservices2022\\.git;C\:\\Users\\himan\\Documents\\microservices2022\\gitcode\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;gitcode\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
