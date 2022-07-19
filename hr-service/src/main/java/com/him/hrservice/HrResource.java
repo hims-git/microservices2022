@@ -24,7 +24,7 @@ public class HrResource {
 			);
 			
 
-	@RequestMapping("/employee")
+	@RequestMapping("/employees")
 	public EmployeeList getEmployees() {
 		
 		EmployeeList employeeList = new EmployeeList();
@@ -35,7 +35,7 @@ public class HrResource {
 	}
 	
 	
-	@RequestMapping("/employee/{id}")
+	@RequestMapping("/employees/{id}")
 	public Employee getEmployeeById(@PathVariable("id") String id)
 	{
 		Employee e = employees.stream()
