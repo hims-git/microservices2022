@@ -1,0 +1,14 @@
+package com.him.pathologyservice;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/pathology")
+public class PathologyResource {
+
+	public PathologyResource() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

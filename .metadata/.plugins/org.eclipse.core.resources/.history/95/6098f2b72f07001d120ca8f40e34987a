@@ -1,0 +1,9 @@
+package com.him.pathologyservice;
+
+public class DisesaseList {
+
+	public DisesaseList() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

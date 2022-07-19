@@ -1,0 +1,12 @@
+package com.him.hrservice;
+
+public class Employee {
+	
+	String id, firstName, lastName, speciality;
+	
+
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

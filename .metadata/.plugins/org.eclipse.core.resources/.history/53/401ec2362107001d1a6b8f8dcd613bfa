@@ -1,0 +1,9 @@
+FROM
+
+RUN
+
+LABEL
+
+EXPOSE 8080
+
+COPY 
