@@ -26,7 +26,7 @@ public class AdmissionResource {
 		//This causes the hard coding of URL inside aggregating micro services
 		//EmployeeList physicians = restTemplate.getForObject("http://localhost:8082/hr/employees", EmployeeList.class);
 		
-		EmployeeList physicians = restTemplate.getForObject("http://hr-service/hr/employees", EmployeeList.class);
+		EmployeeList physicians = restTemplate.getForObject("http://HR-SERVICE/hr/employees", EmployeeList.class);
 		
 		
 		return physicians;
@@ -36,7 +36,7 @@ public class AdmissionResource {
 	@RequestMapping("/healthissues")
 	public DisesaseList getDiseases() {
 		
-		DisesaseList issues = restTemplate.getForObject("http://pathology-service/pathology/diseases", DisesaseList.class);
+		DisesaseList issues = restTemplate.getForObject("http://PATHOLOGY-SERVICE/pathology/diseases", DisesaseList.class);
 		
 		return issues;
 	}
