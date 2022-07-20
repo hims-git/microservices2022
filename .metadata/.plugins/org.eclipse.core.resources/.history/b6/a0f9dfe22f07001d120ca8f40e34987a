@@ -1,9 +1,0 @@
-package com.him.pathologyservice;
-
-public class PathologyResource {
-
-	public PathologyResource() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

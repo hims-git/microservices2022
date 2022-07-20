@@ -1,9 +1,0 @@
-package com.him.pathologyservice;
-
-public class Disease {
-
-	public Disease() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

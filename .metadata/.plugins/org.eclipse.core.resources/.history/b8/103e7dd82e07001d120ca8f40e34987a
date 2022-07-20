@@ -1,9 +1,0 @@
-package com.him.hrservice;
-
-public class EmployeeList {
-
-	public EmployeeList() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

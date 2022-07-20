@@ -1,9 +1,0 @@
-package com.him.admissionsservice;
-
-public class AdmissionResource {
-
-	public AdmissionResource() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
