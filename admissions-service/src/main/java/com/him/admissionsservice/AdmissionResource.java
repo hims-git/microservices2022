@@ -25,6 +25,12 @@ public class AdmissionResource {
 		
 		//This causes the hard coding of URL inside aggregating micro services
 		//EmployeeList physicians = restTemplate.getForObject("http://localhost:8082/hr/employees", EmployeeList.class);
+
+		
+		/*
+		 * Now the routing will happen through Eureka service declaration, this needs @LoadBalanced Annotation on RestTemplate, 
+		 * otherwise restTemplate will try to find a domain named HR-SERVICE and fail
+		 */
 		
 		EmployeeList physicians = restTemplate.getForObject("http://HR-SERVICE/hr/employees", EmployeeList.class);
 		
@@ -45,9 +51,9 @@ public class AdmissionResource {
 	public EmployeeList getPhysiciansH() {
 		
 		
-		//This causes the hard coding of URL inside aggregating micro services
-		//EmployeeList physicians = restTemplate.getForObject("http://localhost:8082/hr/employees", EmployeeList.class);
-		
+		/*
+		 * Using a non @LoadBalanced restTemplate will try to use the domain based URLs 
+		 */
 		EmployeeList physicians = restTemplateHardCoded.getForObject("http://localhost:8082/hr/employees", EmployeeList.class);
 		
 		
