@@ -12,6 +12,8 @@ import org.springframework.web.client.RestTemplate;
 import com.him.model.CatalogItem;
 import com.him.model.Movie;
 import com.him.model.UserRating;
+import com.him.services.MovieInfo;
+import com.him.services.UserRatingInfo;
 
 @RestController
 @RequestMapping("/catalog")
@@ -24,19 +26,23 @@ public class CatalogResource {
 	@Autowired
 	private RestTemplate restTemplate;
 	
+	@Autowired
+	private MovieInfo movieInfo;
 	
+	@Autowired
+	private UserRatingInfo userRatingInfo;
 	
 	@RequestMapping("/{userId}")
 	public List<CatalogItem> getCatalog(@PathVariable("userId") String userId) {
-		UserRating userRating = restTemplate.getForObject("http://ratings-data-service/ratingsdata/user/" + userId, UserRating.class);
+		
+		
+		UserRating userRating = userRatingInfo.getUserRating(userId);
 		
 		return userRating.getRatings().stream()
-				.map(rating -> {
-					Movie movie = restTemplate.getForObject("http://movie-info-service/movies/" + rating.getMovieId() , Movie.class);
-					return new CatalogItem(movie.getName(), movie.getDescription(), rating.getRating());
-				})
+				.map(rating -> movieInfo.getCatalogItem(rating))
 				.collect(Collectors.toList());
 	}
+	
 	
 	
 
